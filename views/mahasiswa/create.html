@@ -1,11 +1,31 @@
-<h2 class="text-xl font-bold mb-4">
-    Tambah Mahasiswa
-</h2>
+<h2 class="text-xl font-bold mb-4">Tambah Mahasiswa</h2>
 <form method="POST" action="/mahasiswa/store">
-    <input name="nama" placeholder="Nama" class="border p-2 w-full mb-3">
-    <input name="jurusan" placeholder="Jurusan" class="border p-2 w-full mb-3">
-    <input name="angkatan" placeholder="Angkatan" class="border p-2 w-full mb-3">
-    <button class="bg-blue-500 text-white px-4 py-2">
-        Simpan
-    </button>
+  <div class="mb-3">
+    <label class="block mb-1">Nama</label>
+    <input
+      name="nama"
+      placeholder="Masukkan Nama"
+      class="border p-2 w-full rounded"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label class="block mb-1">Jurusan</label>
+    <select name="jurusan_id" class="border p-2 w-full rounded" required>
+      <option value="" disabled selected>-- Pilih Jurusan --</option>
+      {{jurusan_options}}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="block mb-1">Angkatan</label>
+    <input
+      name="angkatan"
+      placeholder="Contoh: 2024"
+      class="border p-2 w-full rounded"
+      required
+    />
+  </div>
+  <button class="bg-blue-500 text-white px-4 py-2 rounded shadow">
+    Simpan Data
+  </button>
 </form>

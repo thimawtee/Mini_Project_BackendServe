@@ -1,20 +1,23 @@
-<h2 class="text-xl font-bold mb-4">
-    Data Mahasiswa
-</h2>
-<a href="/mahasiswa/create" class="bg-blue-500 text-white px-4 py-2 rounded">
-    Tambah Mahasiswa
-</a>
-<table class="w-full mt-4 bg-white">
-    <thead class="bg-gray-200">
-        <tr>
-            <th class="p-2">ID</th>
-            <th class="p-2">Nama</th>
-            <th class="p-2">Jurusan</th>
-            <th class="p-2">Angkatan</th>
-            <th class="p-2">Aksi</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{rows}}
-    </tbody>
-</table>
+<div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold text-gray-800">Data Mahasiswa</h2>
+    <a href="/mahasiswa/create" class="bg-blue-600 text-white px-5 py-2 rounded-lg shadow-sm hover:bg-blue-700 transition flex items-center">
+        <span class="mr-2">+</span> Tambah Mahasiswa
+    </a>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+    <table class="w-full text-left border-collapse">
+        <thead class="bg-gray-50">
+            <tr>
+                <th class="p-4 font-semibold text-gray-700 border-b text-center">ID</th>
+                <th class="p-4 font-semibold text-gray-700 border-b text-center">Nama Lengkap</th>
+                <th class="p-4 font-semibold text-gray-700 border-b text-center">Jurusan</th>
+                <th class="p-4 font-semibold text-gray-700 border-b text-center">Angkatan</th>
+                <th class="p-4 font-semibold text-gray-700 border-b text-center">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{rows}}
+        </tbody>
+    </table>
+</div>
